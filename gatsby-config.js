@@ -4,32 +4,39 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: 'WindTale',
+    siteTitleAlt: 'WindTale',
+    siteUrl: 'https://windtale.net',
+    author: '@renic00',
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme's README for all available options
+      // See the theme's
+      // README for all available options
       options: {
         navigation: [
           {
             title: `Blog`,
             slug: `/blog`,
           },
-          {
-            title: `About`,
-            slug: `/about`,
-          },
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            name: `GitHub`,
+            url: `https://github.com/arkist`,
           },
           {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            name: 'LinkedIn',
+            url: 'https://linkedin.com/in/arkist'
+          },
+          {
+            name: `Facebook`,
+            url: `https://facebook.com/windtale`,
           },
         ],
       },
@@ -59,12 +66,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Windtale - Jinwoo's Nest`,
+        short_name: `windtale`,
+        description: `personal space of Jinwoo Oh`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#6B46C1`,
+        theme_color: `steelblue`,
         display: `standalone`,
         icons: [
           {
