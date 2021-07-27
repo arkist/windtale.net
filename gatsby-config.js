@@ -19,8 +19,9 @@ module.exports = {
       // See the theme's
       // README for all available options
       options: {
-        navigation: [
-        ],
+        mdx: false,
+        postsPrefix: '/blog',
+        navigation: [],
         externalLinks: [
           {
             name: `GitHub`,
@@ -33,6 +34,44 @@ module.exports = {
           {
             name: `Facebook`,
             url: `https://facebook.com/windtale`,
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        lessBabel: true,
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: `gatsby-remark-embedder`,
+            options: {
+              customTransformers: [
+                // Your custom transformers
+              ],
+              services: {
+                // The service-specific options by the name of the service
+              },
+            },
+          },
+        ],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
           },
         ],
       },
