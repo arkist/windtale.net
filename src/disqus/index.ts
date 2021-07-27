@@ -1,1 +1,0 @@
-export { Disqus } from './Disqus'
