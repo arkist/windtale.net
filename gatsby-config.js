@@ -20,10 +20,6 @@ module.exports = {
       // README for all available options
       options: {
         navigation: [
-          {
-            title: `Blog`,
-            slug: `/blog`,
-          },
         ],
         externalLinks: [
           {
