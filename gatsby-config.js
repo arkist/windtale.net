@@ -21,20 +21,19 @@ module.exports = {
       options: {
         mdx: false,
         postsPrefix: '/blog',
-        navigation: [],
+        formatString: 'YYYY/MM/DD',
+        navigation: [
+          {
+            title: 'Intro',
+            slug: '/',
+          },
+          {
+            title: `Blog`,
+            slug: `/blog`,
+          },
+        ],
         externalLinks: [
-          {
-            name: `GitHub`,
-            url: `https://github.com/arkist`,
-          },
-          {
-            name: 'LinkedIn',
-            url: 'https://linkedin.com/in/arkist'
-          },
-          {
-            name: `Facebook`,
-            url: `https://facebook.com/windtale`,
-          },
+
         ],
       },
     },
