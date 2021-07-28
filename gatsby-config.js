@@ -1,7 +1,7 @@
 require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
-const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
+const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID || 'UA-38155854-1'
 
 module.exports = {
   flags: {
@@ -93,7 +93,7 @@ module.exports = {
     googleAnalyticsTrackingId && {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        trackingId: googleAnalyticsTrackingId,
       },
     },
     `gatsby-plugin-sitemap`,
