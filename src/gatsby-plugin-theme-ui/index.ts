@@ -10,10 +10,4 @@ const theme = merge(minimalBlogTheme, {
 
 export default {
   ...theme,
-  section_latest_posts: {
-    marginBottom: '0 !important',
-  },
-  section_bottom: {
-    display: 'none'
-  },
 }

@@ -15,7 +15,7 @@ const Footer: FC = () => {
         a: {
           variant: `links.secondary`,
         },
-        flexDirection: [`column`, `column`, `row`],
+        flexDirection: 'row',
         variant: `dividers.top`,
       }}
     >
